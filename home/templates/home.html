@@ -106,8 +106,8 @@
     <div class="text-center">
         <button class="btn btn-success" onclick="upload_file()">Upload File</button>
     </div>
-
-    <div class="carad mt-3" id="btn" style="display: none;">
+    {% comment %} style="display: none;" {% endcomment %}
+    <div class="carad mt-3" id="btn"  > 
         <div class="card-bodqy">
 
             <div class="background">
@@ -118,7 +118,6 @@
             </div>
 
         </div>
-    </div>
     </div>
 
 
@@ -161,7 +160,7 @@
 
                     url = `http://127.0.0.1:8000/download/${result.data.folder}`
 
-                    // document.getElementById('btn').style.display = 'df' -h
+                    document.getElementById('btn').style.display = 'df' -h
                     
 
                 })

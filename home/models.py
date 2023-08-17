@@ -11,7 +11,7 @@ class Folder(models.Model):
     created_at = models.DateField(auto_now = True)
 
 def get_upload_path(instance, filename):
-    return os.path.join(str(instance.folder.uuid), filename)
+    return os.path.join(str(instance.folder.uid), filename)
 
 class Files(models.Model):
     folder = models.ForeignKey(Folder, on_delete=models.CASCADE)

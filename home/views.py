@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser
 from .serializers import *
 
-def home(request):
+def homeApp(request):
     return render(request, "home.html")
 
 def download(request, uid):
@@ -22,7 +22,8 @@ class HandleFileUpload(APIView):
                 serializer.save()
                 return Response({
                     "status" : 200,
-                    "message" : "files uploaded successfully"
+                    "message" : "files uploaded successfully",
+                    "data" : serializer.data
                 })
             
             return Response({
